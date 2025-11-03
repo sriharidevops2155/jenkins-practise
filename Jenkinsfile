@@ -1,5 +1,5 @@
 pipeline {   //Here pipeline is the root element
-    agent node {
+    agent {
         label 'AGENT-1'
     }
 }
