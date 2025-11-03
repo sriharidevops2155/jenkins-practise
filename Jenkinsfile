@@ -21,4 +21,3 @@ pipeline {   //Here pipeline is the root element
             }
         }
     }
-}
