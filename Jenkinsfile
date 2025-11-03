@@ -5,6 +5,9 @@ pipeline {   //Here pipeline is the root element
     environment{
         COURSE = 'Jenkins' 
     }
+    options{
+        timeout(time: 1, unit: 'SECONDS')
+    }
 
     //Build
     stages {
