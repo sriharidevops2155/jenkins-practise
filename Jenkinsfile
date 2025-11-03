@@ -3,6 +3,7 @@ pipeline {   //Here pipeline is the root element
         label 'AGENT-1'
     }
 
+    //Build
     stages {
         stage('Build') {
             steps {
@@ -19,5 +20,19 @@ pipeline {   //Here pipeline is the root element
                 echo 'Deploying....'
             }
         }
+    }
+
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+            deleteDir()
+        }
+        success { 
+            echo 'I will say Hello success'
+        }
+        failure { 
+            echo 'I will say Hello Failure'
+        }
+
     }
 }
