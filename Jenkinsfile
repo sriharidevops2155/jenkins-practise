@@ -2,13 +2,19 @@ pipeline {   //Here pipeline is the root element
     agent {
         label 'AGENT-1'
     }
+    environment{
+        COURSE = 'Jenkins' 
+    }
 
     //Build
     stages {
         stage('Build') {
             steps {
                 script{
-                    echo 'Building..'
+                    sh """
+                        echo "Hello Build"
+                        env
+                    """
                 }
             }
         }
