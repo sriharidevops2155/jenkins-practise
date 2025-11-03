@@ -2,7 +2,6 @@ pipeline {   //Here pipeline is the root element
     agent {
         label 'AGENT-1'
     }
-}
 
     stages {
         stage('Build') {
@@ -21,3 +20,4 @@ pipeline {   //Here pipeline is the root element
             }
         }
     }
+}
